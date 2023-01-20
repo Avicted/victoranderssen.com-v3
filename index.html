@@ -11,15 +11,30 @@
 <script>
     window.onload = function(){
         document.getElementById("year").innerHTML = new Date().getFullYear();
+        typeWriter();
     }
     console.log("Hello Friends!");
+
+    // TypeWriter Effect
+    var i = 0;
+    var txt = 'Welcome!';
+    var speed = 512;
+
+    function typeWriter() {
+        if (i < txt.length) {
+            document.querySelector("h1").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
 </script>
 
 <body>
   <div class="bg-white">
     <div class="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
       <div class="text-center">
-        <h1 class="text-3xl font-bold underline pb-12">Welcome!</h1>
+        <h1 class="text-3xl font-bold underline pb-12"></h1>
           <p>My favorite programming language is <strong>C</strong>.</p>
           <p class="pt-12">Links:</p>
           <ul>
