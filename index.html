@@ -4,46 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+    <title>VA</title>
 </head>
 
-<script>
-    window.onload = function(){
-        document.getElementById("year").innerHTML = new Date().getFullYear();
-        typeWriter();
-    }
-    console.log("Hello Friends!");
 
-    // TypeWriter Effect
-    var i = 0;
-    var txt = 'Welcome!';
-    var speed = 512;
-
-    function typeWriter() {
-        if (i < txt.length) {
-            document.querySelector("h1").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-        }
-    }
-
-</script>
-
-<body class="font-mono bg-orange-50">
+<body class="font-mono bg-orange-50 dark:bg-gray-900">
   <div>
-    
-    <div class="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
-      <div class="text-center">
-        <h1 class="text-3xl font-bold underline pb-12"></h1>
-          <p>I write software.</p>
-          <p class="pt-12 font-bold">Links:</p>
-          <ul>
-            <li class="text-orange-600 hover:text-orange-400 hover:underline"><a href="https://github.com/Avicted">https://github.com/Avicted</a></li>
-            <li class="text-orange-600 hover:text-orange-400 hover:underline"><a href="https://www.linkedin.com/in/victoranderssen/">https://www.linkedin.com/in/victoranderssen/</a></li>
-            <li class="text-orange-600 hover:text-orange-400 hover:underline"><a href="https://notasoftwaredevelopmentcompany.com">https://notasoftwaredevelopmentcompany.com</a></li>
-          </ul>
-          <p class="pt-24">Copyright <span id="year"></span> Victor</p>
+    <div class="divide-y divide-gray-200 dark:divide-gray-600 overflow-hidden rounded-lg shadow dark:shadow-gray-800">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl">
+          <div class="px-4 py-4 sm:px-6">
+            <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-300">
+              Victor Anderssén
+            </h3>
+            <p class="max-w-2xl text-sm text-gray-500 dark:text-gray-500">
+              Computer Science Student
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl">
+          <div class="px-4 py-1 sm:px-6 justify-between flex">
+            <a href="/" class="flex items-end text-lg font-medium text-gray-900 hover:underline text-color text-orange-400">
+              Home
+            </a>
+            <div class="flex">
+            <button onclick="dark_mode_toggle()" type="button" class="inline-flex items-center rounded-md border border-transparent bg-orange-400 dark:bg-gray-600 px-3 py-1 text-sm font-medium leading-4 text-white shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                  </svg>
+                  
+              </button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="px-4 py-5 sm:p-6 dark:text-gray-300">
+        <div class="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
+          <div class="text-center">
+            <h1 class="text-5xl font-bold underline pb-12 text-orange-400"></h1>
+              <p>I write software.</p>
+              <p class="pt-12 font-bold">Links:</p>
+              <ul>
+                <li class="text-blue-700 dark:text-blue-500 hover:text-orange-600 hover:underline"><a href="https://github.com/Avicted">https://github.com/Avicted</a></li>
+                <li class="text-blue-700 dark:text-blue-500 hover:text-orange-600 hover:underline"><a href="https://www.linkedin.com/in/victoranderssen/">https://www.linkedin.com/in/victoranderssen/</a></li>
+                <li class="text-blue-700 dark:text-blue-500 hover:text-orange-600 hover:underline"><a href="https://notasoftwaredevelopmentcompany.com">https://notasoftwaredevelopmentcompany.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <p class="pt-24 text-center text-gray-500">Copyright <span id="year"></span> Victor</p>
         </div>
       </div>
     </div>
